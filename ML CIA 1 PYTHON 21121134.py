@@ -111,7 +111,18 @@ plt.ylabel('MntTotal')
 
 plt.tight_layout()
 plt.show()
+
 # regression
+from sklearn import linear_model
+import pandas as pd
+data =pd.read_csv("C:\\Users\\siddharth\\Documents\\SMR\\ifood_df.csv")
+X = data[['Income']]
+y = data['Age']
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+print(regr.coef_)
+
+# regression graph
 import matplotlib.pyplot as plt
 from scipy import stats
 import pandas as pd
